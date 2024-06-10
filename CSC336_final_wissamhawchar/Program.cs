@@ -10,13 +10,17 @@ using _final_DAL.Repositries.Flights;
 using _final_DAL.Repositries.Passengers;
 using _final_DAL.Repositries.Pilots;
 using _final_DAL.Repositries.Reservations;
+using CSC336_final_wissamhawchar.Filters;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add(new GlobalExceptionFilter());
+});
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", policy =>
