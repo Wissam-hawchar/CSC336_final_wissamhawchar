@@ -20,8 +20,4 @@
     <ProjectReference Include="..\_final_BLL\_final_BLL.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
