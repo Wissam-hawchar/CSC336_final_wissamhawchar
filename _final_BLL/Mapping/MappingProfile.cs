@@ -22,6 +22,7 @@ namespace _final_BLL.Mapping
             CreateMap<Passenger, PassengerDTO>().ReverseMap();
             CreateMap<Pilot, PilotDTO>().ReverseMap();
             CreateMap<Reservation, ReservationDTO>().ReverseMap();
+            CreateMap<Reservation, ReservationWithPassengerAndFlightDTO>().ReverseMap();
         }
     }
 }
